@@ -5,6 +5,7 @@ import { PrincipalComponent } from './principal.component';
 
 const routes: Routes = [
   {path: 'ppal', component: PrincipalComponent, children: [
+    {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent}
   ]}
 ]
