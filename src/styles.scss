@@ -1,7 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face{
+
+@font-face {
     font-family: Rochester;
     src: url(./assets/fonts/Rochester-Regular.ttf);
     font-weight: normal;
     font-style: normal;
+}
+
+.rochester {
+    font-family: Rochester;
+    font-weight: bold;
+}
+
+.img-6 {
+    width: 100%;
+    height: 90%;
+}
+
+.acordion-fondo {
+    background-color: lightseagreen;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.sombreado:hover {
+    box-shadow: 2px 2px 15px 2px lightseagreen;
+}
+
+.letra-negra {
+    color: black !important;
 }

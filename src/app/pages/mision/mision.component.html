@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-group">
+                <div class="card m-4">
+                    <img class="card-img-top" [src]="this.wpMision.acf.grupos_misioneros.infancia_misionera.imagen" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.wpMision.acf.grupos_misioneros.infancia_misionera.titulo}}</h5>
+                        <p class="card-text " [innerHTML]='this.wpMision.acf.grupos_misioneros.infancia_misionera.descripcion_corta'></p>
+                        <a href="#" class="btn btn-primary">Conocer mas...</a>
+                    </div>
+                </div>
+                <div class="card m-4">
+                    <img class="card-img-top" [src]="this.wpMision.acf.grupos_misioneros.juventud_misionera.imagen" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.wpMision.acf.grupos_misioneros.juventud_misionera.titulo}}</h5>
+                        <p class="card-text " [innerHTML]='this.wpMision.acf.grupos_misioneros.juventud_misionera.descripcion_corta'></p>
+                        <a href="#" class="btn btn-primary">Conocer mas...</a>
+                    </div>
+                </div>
+                <div class="card m-4">
+                    <img class="card-img-top" [src]="this.wpMision.acf.grupos_misioneros.familia_misionera.imagen" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.wpMision.acf.grupos_misioneros.familia_misionera.titulo}}</h5>
+                        <p class="card-text " [innerHTML]='this.wpMision.acf.grupos_misioneros.familia_misionera.descripcion_corta'></p>
+                        <a href="#" class="btn btn-primary">Conocer mas...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <h2 [innerHTML]='this.wpMision.acf.titulo_nuestra_mision'></h2>
+        </div>
+        <div class="col-md-6">
+            <div id="mapid" class="m-2"></div>
+        </div>
+        <div class="col-md-6">
+            <span [innerHTML]='this.wpMision.content.rendered'></span>
+        </div>
+    </div>
+</div>

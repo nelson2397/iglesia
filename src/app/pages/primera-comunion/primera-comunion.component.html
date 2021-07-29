@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 m-3">
+            <h1 class="rochester text-center">
+                <i class="fas fa-church"></i> {{this.wpPrimeraComunion.title.rendered}}
+                <i class="fas fa-cross"></i>
+            </h1>
+        </div>
+        <div class="col-md-6 text-center">
+            <span [innerHTML]='this.wpPrimeraComunion.content.rendered'></span>
+        </div>
+        <div class="col-md-6">
+            <img [src]="this.wpPrimeraComunion.acf.imagen" class="rounded img-6 img-fluid" alt="primera-comunion">
+        </div>
+        <div class="col-md-12 m-2 acordion-fondo">
+            <div class="accordion m-2" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Requisitos para realizar la primera comunión
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <span [innerHTML]='this.wpPrimeraComunion.acf.requisitos.requisitos'></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Fechas -  Primera Comunión
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <span [innerHTML]='this.wpPrimeraComunion.acf.requisitos.fechas_celebraciones'></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

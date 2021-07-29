@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-12">
+            <h1 class="rochester m-3 text-center"><i class="fas fa-church"></i> Solemnidades
+                <i class="fas fa-cross"></i></h1>
+        </div>
+        <div class="col-md-4 d-grid gap-2">
+            <button type="button" (click)="cambiarFotos(1)" id="1" class="btn btn-outline-info active letra-negra">Exposición del Santisimo</button>
+            <button type="button" (click)="cambiarFotos(2)" id="2" class="btn btn-outline-info letra-negra">Corpus Christi</button>
+            <button type="button" (click)="cambiarFotos(3)" id="3" class="btn btn-outline-info letra-negra">Pentecostés</button>
+            <button type="button" (click)="cambiarFotos(4)" id="4" class="btn btn-outline-info letra-negra">Rosa Mística</button>
+            <button type="button" (click)="cambiarFotos(5)" id="5" class="btn btn-outline-info letra-negra">Sagrado Corazon de Jesús</button>
+            <button type="button" (click)="cambiarFotos(6)" id="6" class="btn btn-outline-info letra-negra">Virgen de Fátima</button>
+            <button type="button" (click)="cambiarFotos(7)" id="7" class="btn btn-outline-info letra-negra">Virgen del Carmen</button>
+        </div>
+        <div class="col-md-8 scroll mt-2">
+            {{ fotos }}
+        </div>
+    </div>
+</div>

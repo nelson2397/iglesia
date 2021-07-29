@@ -2,80 +2,72 @@
     <nav class="navbar border navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">¿Quiénes somos?</a>
+                        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['quienes-somos']" routerLinkActive="active">¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Universo profético
                         </a>
-                        <div class="container-fluid ancho-contenedor dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                    <a class="dropdown-item deplegar">Misión</a>
-                                    <a class="dropdown-item" href="#">Primera Comunión</a>
-                                    <a class="dropdown-item" href="#">Confirmación</a>
-                                    <a class="dropdown-item" href="#">Catecumenado</a>
-                                    <a class="dropdown-item" href="#">Familia / Matrimonio</a>
-                                    <a class="dropdown-item" href="#">Pastoral Biblica</a>
-                                    <a class="dropdown-item" href="#">Pastoral educativa</a>
-                                </div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                    <a class="dropdown-item" href="#">1. Historia</a>
-                                    <a class="dropdown-item" href="#">2. Biblia</a>
-                                    <a class="dropdown-item" href="#">3. Jesucristo</a>
-                                    <a class="dropdown-item" href="#">4. Iglesia</a>
-                                    <a class="dropdown-item" href="#">5. Sacramento</a>
-                                    <a class="dropdown-item" href="#">6. Religiones comparadas</a>
-                                    <a class="dropdown-item" href="#">7. Nueva era</a>
-                                    <a class="dropdown-item" href="#">8. Escatología cristiana</a>
-                                </div>
-                            </div>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item deplegar" [routerLink]="['mision']" routerLinkActive="active">Misión</a>
+                            <a class="dropdown-item" [routerLink]="['bautizo']" routerLinkActive="active">Bautismo</a>
+                            <a class="dropdown-item" [routerLink]="['primera-comunion']" routerLinkActive="active">Primera Comunión</a>
+                            <a class="dropdown-item" [routerLink]="['confirmacion']" routerLinkActive="active">Confirmación</a>
+                            <a class="dropdown-item" [routerLink]="['catecumenado']" routerLinkActive="active">Catecumenado</a>
+                            <a class="dropdown-item" [routerLink]="['familia-matrimonio']" routerLinkActive="active">Familia / Matrimonio</a>
+                            <a class="dropdown-item" [routerLink]="['pastoral-biblica']" routerLinkActive="active">Pastoral Biblica</a>
+                            <a class="dropdown-item" [routerLink]="['pastoral-educativa']" routerLinkActive="active">Pastoral educativa</a>
+                            <a class="dropdown-item" [routerLink]="['evangelizacion']" routerLinkActive="active">Programa Básico de evangelización</a>
+
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Litúrgica
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Templo parroquial</a></li>
-                            <li><a class="dropdown-item" href="#">Calendario</a></li>
-                            <li><a class="dropdown-item" href="#">Oraciones</a></li>
-                            <li><a class="dropdown-item" href="#">Canto</a></li>
-                            <li><a class="dropdown-item" href="#">Arte</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['templo-parroquial']" routerLinkActive="active">Templo parroquial</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['calendario']" routerLinkActive="active">Calendario</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['oraciones']" routerLinkActive="active">Oraciones</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['canto']" routerLinkActive="active">Cantos</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['arte']" routerLinkActive="active">Arte</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['solemnidades']" routerLinkActive="active">Solemnidades</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Social
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Caridad</a></li>
-                            <li><a class="dropdown-item" href="#">Política</a></li>
-                            <li><a class="dropdown-item" href="#">Unidad</a></li>
-                            <li><a class="dropdown-item" href="#">Salud</a></li>
-                            <li><a class="dropdown-item" href="#">Educación</a></li>
-                            <li><a class="dropdown-item" href="#">Empleo</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['caridad']" routerLinkActive="active">Caridad</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['politica']" routerLinkActive="active">Política</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['unidad']" routerLinkActive="active">Unidad</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['salud']" routerLinkActive="active">Salud</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['educacion']" routerLinkActive="active">Educación</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['empleo']" routerLinkActive="active">Empleo</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cencovi</a>
+                        <a class="nav-link" [routerLink]="['cencovi']" routerLinkActive="active">Cencovi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">3Panes</a>
+                        <a class="nav-link" [routerLink]="['tres-panes']" routerLinkActive="active">3Panes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Avisos parroquiales</a>
+                        <a class="nav-link" [routerLink]="['avisos']" routerLinkActive="active">Avisos parroquiales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['papal']" routerLinkActive="active">Complejo parroquial</a>
                     </li>
                 </ul>
             </div>

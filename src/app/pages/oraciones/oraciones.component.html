@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-12">
+            <h1 class="rochester m-3 text-center"><i class="fas fa-church"></i> Oraciones
+                <i class="fas fa-cross"></i></h1>
+        </div>
+        <div class="col-md-4 d-grid gap-2">
+            <button type="button" (click)="cambiarTexto(1)" id="1" class="btn btn-outline-info active letra-negra">Liturgia de las horas</button>
+            <button type="button" (click)="cambiarTexto(2)" id="2" class="btn btn-outline-info letra-negra">Santo Rosario</button>
+            <button type="button" (click)="cambiarTexto(3)" id="3" class="btn btn-outline-info letra-negra">Rosario de la Divina Misericordia</button>
+            <button type="button" (click)="cambiarTexto(4)" id="4" class="btn btn-outline-info letra-negra">Santo Rosario Biblico</button>
+            <button type="button" (click)="cambiarTexto(5)" id="5" class="btn btn-outline-info letra-negra">Oración de la mañana y la noche</button>
+            <button type="button" (click)="cambiarTexto(6)" id="6" class="btn btn-outline-info letra-negra">Oraciones Para todos los dias</button>
+        </div>
+        <div class="col-md-8 scroll mt-2">
+            {{ parrafo }}
+        </div>
+        <div class="col-md-12 text-center mt-2">
+            <a class="btn btn-info" [href]="download.url" [download]="download.name"><i class="fas fa-file-download"></i> {{ download.name }}</a>
+        </div>
+    </div>
+</div>+
