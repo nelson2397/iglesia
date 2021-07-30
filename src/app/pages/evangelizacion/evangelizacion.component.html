@@ -15,10 +15,10 @@
             <button type="button" (click)="cambiarTexto(8)" id="8" class="btn btn-outline-info letra-negra">Escatologia Cristiana</button>
         </div>
         <div class="col-md-8 scroll mt-2">
-            {{ parrafo }}
+            <span [innerHTML]="parrafo"></span>
         </div>
         <div class="col-md-12 text-center my-2">
-            <a class="btn btn-info" [href]="download.url" [download]="download.name"><i class="fas fa-file-download"></i> {{ download.name }}</a>
+            <a class="btn btn-info" [href]="download.url" [download]="download.name" target="_blank"><i class="fas fa-file-download"></i> {{ download.name }}</a>
         </div>
     </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataWordPressService } from '../../services/data-word-press.service';
+
 declare var $:any;
 @Component({
   selector: 'app-templo-parroquial',
@@ -6,13 +8,14 @@ declare var $:any;
   styleUrls: ['./templo-parroquial.component.scss']
 })
 export class TemploParroquialComponent implements OnInit {
+  dataTemploParroquial: any;
 
-  constructor() { }
+  constructor(private dataWordPress: DataWordPressService) { }
 
   ngOnInit(): void {
-    $(document).ready(function() {
-      $("#gallery").unitegallery();
-  });
+    this.dataWordPress.getTemploParroquial('pages').subscribe(resp => {
+      this.dataTemploParroquial = resp;
+    })
   }
 
 }

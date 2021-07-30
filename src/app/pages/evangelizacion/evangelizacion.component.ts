@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataWordPressService } from 'src/app/services/data-word-press.service';
 declare var $:any;
 @Component({
   selector: 'app-evangelizacion',
@@ -12,13 +13,19 @@ export class EvangelizacionComponent implements OnInit {
     url:"",
     name:""
   }
+  dataEvangelizacion: any;
 
-  constructor() { }
+  constructor(private dataWpServices: DataWordPressService) { }
 
   ngOnInit(): void {
-    this.parrafo="1";
-    this. download.url="./assets/Documentos/evangelizacion/historia.docx";
-    this.download.name = "Historia.docx";
+    this.dataWpServices.getProgramaEvangelizacion('pages').subscribe(resp => {
+      this.dataEvangelizacion = resp;
+    })
+    setTimeout(() => {
+      this.parrafo= this.dataEvangelizacion.acf.Item_1.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_1.archivo_a_descargar;
+      this.download.name = `${this.dataEvangelizacion.acf.Item_1.titulo_item}.pdf`;
+    }, 3000);
   }
 
   cambiarTexto(btnId: number){
@@ -27,71 +34,71 @@ export class EvangelizacionComponent implements OnInit {
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="1";
-      this. download.url="./assets/Documentos/evangelizacion/historia.docx";
-    this.download.name = "Historia.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_1.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_1.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_1.titulo_item}.pdf`;
     }else if (btnId === 2){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="2";
-      this. download.url="./assets/Documentos/evangelizacion/2.docx";
-    this.download.name = "2.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_2.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_2.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_1.titulo_item}.pdf`;
     }
     else if (btnId === 3){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="3";
-      this. download.url="./assets/Documentos/evangelizacion/3.docx";
-    this.download.name = "3.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_3.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_3.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_3.titulo_item}.pdf`;
     }
     else if (btnId === 4){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="4";
-      this. download.url="./assets/Documentos/evangelizacion/4.docx";
-    this.download.name = "4.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_4.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_4.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_4.titulo_item}.pdf`;
     }
     else if (btnId === 5){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="5";
-      this. download.url="./assets/Documentos/evangelizacion/5.docx";
-    this.download.name = "5.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_5.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_5.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_5.titulo_item}.pdf`;
     }
     else if (btnId === 6){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="6";
-      this. download.url="./assets/Documentos/evangelizacion/6.docx";
-    this.download.name = "6.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_6.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_6.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_6.titulo_item}.pdf`;
     }
     else if (btnId === 7){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="7";
-      this. download.url="./assets/Documentos/evangelizacion/7.docx";
-    this.download.name = "7.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_7.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_7.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_7.titulo_item}.pdf`;
     }
     else if (btnId === 8){
       let active = $('.btn-outline-info').hasClass('active');
       if(active){
         $('.btn-outline-info').removeClass('active');
       }
-      this.parrafo="8";
-      this. download.url="./assets/Documentos/evangelizacion/8.docx";
-    this.download.name = "8.docx";
+      this.parrafo= this.dataEvangelizacion.acf.Item_8.contenido_item;
+      this. download.url= this.dataEvangelizacion.acf.Item_8.archivo_a_descargar;
+    this.download.name = `${this.dataEvangelizacion.acf.Item_8.titulo_item}.pdf`;
     }
     $(`#${btnId}`).addClass('active');
     }
