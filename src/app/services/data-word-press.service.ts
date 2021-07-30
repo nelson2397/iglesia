@@ -47,4 +47,10 @@ export class DataWordPressService {
   GetPastoralBiblica(path:string){
     return this.http.get(`${this.url}/${path}/77`)
   }
+  getTemploParroquial(path: string){
+    return this.http.get(`${this.url}/${path}/176`)
+  }
+  getProgramaEvangelizacion(path: string){
+    return this.http.get(`${this.url}/${path}/144`)
+  }
 }

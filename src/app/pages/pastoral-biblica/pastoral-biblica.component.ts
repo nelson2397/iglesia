@@ -21,15 +21,10 @@ export class PastoralBiblicaComponent implements OnInit {
 
     this.DataServices.GetPastoralBiblica('pages').subscribe(resp => {
       this.wpPastBiblica=resp;
-    })
-    setTimeout(() => {
       this.parrafo = this.wpPastBiblica.acf.Item_1.contenido_item;
       this.download.url =this.wpPastBiblica.acf.Item_1.archivo_a_descargar;
       this.download.name= this.wpPastBiblica.acf.Item_1.titulo_item;
-      }, 3000);
-
-    
-    
+    })
   }
 
   cambiarTexto(btnId: number){
