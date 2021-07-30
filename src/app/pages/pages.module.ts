@@ -9,7 +9,6 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MisionComponent } from './mision/mision.component';
 import { PrimeraComunionComponent } from './primera-comunion/primera-comunion.component';
 import { ConfirmacionComponent } from './confirmacion/confirmacion.component';
-import { CatecumenadoComponent } from './catecumenado/catecumenado.component';
 import { FamiliaMatrimonioComponent } from './familia-matrimonio/familia-matrimonio.component';
 import { PastoralBiblicaComponent } from './pastoral-biblica/pastoral-biblica.component';
 import { PastoralEducativaComponent } from './pastoral-educativa/pastoral-educativa.component';
@@ -42,7 +41,6 @@ import { SolemnidadesComponent } from './solemnidades/solemnidades.component';
     MisionComponent,
     PrimeraComunionComponent,
     ConfirmacionComponent,
-    CatecumenadoComponent,
     FamiliaMatrimonioComponent,
     PastoralBiblicaComponent,
     PastoralEducativaComponent,
@@ -77,7 +75,6 @@ import { SolemnidadesComponent } from './solemnidades/solemnidades.component';
     MisionComponent,
     PrimeraComunionComponent,
     ConfirmacionComponent,
-    CatecumenadoComponent,
     FamiliaMatrimonioComponent,
     PastoralBiblicaComponent,
     PastoralEducativaComponent,
