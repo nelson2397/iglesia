@@ -1,24 +1,24 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="rochester m-3 text-center"><i class="fas fa-church"></i> Programa básico de Evangelización
+            <h1 class="rochester m-3 text-center" *ngIf="dataEvangelizacion.title.rendered"><i class="fas fa-church"></i> {{dataEvangelizacion.title.rendered}}
                 <i class="fas fa-cross"></i></h1>
         </div>
         <div class="col-md-4 d-grid gap-2 mt-2">
-            <button type="button" (click)="cambiarTexto(1)" id="1" class="btn btn-outline-info active letra-negra">Historia</button>
-            <button type="button" (click)="cambiarTexto(2)" id="2" class="btn btn-outline-info letra-negra">Biblia</button>
-            <button type="button" (click)="cambiarTexto(3)" id="3" class="btn btn-outline-info letra-negra">Jesucristo</button>
-            <button type="button" (click)="cambiarTexto(4)" id="4" class="btn btn-outline-info letra-negra">Iglesia</button>
-            <button type="button" (click)="cambiarTexto(5)" id="5" class="btn btn-outline-info letra-negra">Sacramento</button>
-            <button type="button" (click)="cambiarTexto(6)" id="6" class="btn btn-outline-info letra-negra">Religiones Comparadas</button>
-            <button type="button" (click)="cambiarTexto(7)" id="7" class="btn btn-outline-info letra-negra">Nueva Era</button>
-            <button type="button" (click)="cambiarTexto(8)" id="8" class="btn btn-outline-info letra-negra">Escatologia Cristiana</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_1.titulo_item" (click)="cambiarTexto(1)" id="1" class="btn btn-outline-info active letra-negra">{{dataEvangelizacion.acf.Item_1.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_2.titulo_item" (click)="cambiarTexto(2)" id="2" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_2.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_3.titulo_item" (click)="cambiarTexto(3)" id="3" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_3.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_4.titulo_item" (click)="cambiarTexto(4)" id="4" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_4.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_5.titulo_item" (click)="cambiarTexto(5)" id="5" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_5.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_6.titulo_item" (click)="cambiarTexto(6)" id="6" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_6.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_7.titulo_item" (click)="cambiarTexto(7)" id="7" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_7.titulo_item}}</button>
+            <button type="button" *ngIf="dataEvangelizacion.acf.Item_8.titulo_item" (click)="cambiarTexto(8)" id="8" class="btn btn-outline-info letra-negra">{{dataEvangelizacion.acf.Item_8.titulo_item}}</button>
         </div>
         <div class="col-md-8 scroll mt-2">
             <span [innerHTML]="parrafo"></span>
         </div>
         <div class="col-md-12 text-center my-2">
-            <a class="btn btn-info" [href]="download.url" [download]="download.name" target="_blank"><i class="fas fa-file-download"></i> {{ download.name }}</a>
+            <a class="btn btn-info" *ngIf="download.url" [href]="download.url" [download]="download.name" target="_blank"><i class="fas fa-file-download"></i> {{ download.name }}</a>
         </div>
     </div>
 </div>

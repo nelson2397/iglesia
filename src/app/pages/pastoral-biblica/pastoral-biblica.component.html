@@ -1,22 +1,22 @@
 <div class="container">
     <div class="row my-3">
         <div class="col-md-12">
-            <h1 class="rochester m-3 text-center"><i class="fas fa-church"></i> {{this.wpPastBiblica.title.rendered}}
+            <h1 class="rochester m-3 text-center" *ngIf="wpPastBiblica.title.rendered"><i class="fas fa-church"></i> {{wpPastBiblica.title.rendered}}
                 <i class="fas fa-cross"></i></h1>
         </div>
         <div class="col-md-4 d-grid gap-2">
-            <button type="button" (click)="cambiarTexto(1)" id="1" class="btn btn-outline-info active letra-negra">{{this.wpPastBiblica.acf.Item_1.titulo_item}}</button>
-            <button type="button" (click)="cambiarTexto(2)" id="2" class="btn btn-outline-info letra-negra">{{this.wpPastBiblica.acf.Item_2.titulo_item}}</button>
-            <button type="button" (click)="cambiarTexto(3)" id="3" class="btn btn-outline-info letra-negra">{{this.wpPastBiblica.acf.Item_3.titulo_item}}</button>
-            <button type="button" (click)="cambiarTexto(4)" id="4" class="btn btn-outline-info letra-negra">{{this.wpPastBiblica.acf.Item_4.titulo_item}}</button>
-            <button type="button" (click)="cambiarTexto(5)" id="5" class="btn btn-outline-info letra-negra">{{this.wpPastBiblica.acf.Item_5.titulo_item}}</button>
-            <button type="button" (click)="cambiarTexto(6)" id="6" class="btn btn-outline-info letra-negra">{{this.wpPastBiblica.acf.Item_6.titulo_item}}</button>
+            <button *ngIf="wpPastBiblica.acf.Item_1.titulo_item" type="button" (click)="cambiarTexto(1)" id="1" class="btn btn-outline-info active letra-negra">{{wpPastBiblica.acf.Item_1.titulo_item}}</button>
+            <button *ngIf="wpPastBiblica.acf.Item_2.titulo_item" type="button" (click)="cambiarTexto(2)" id="2" class="btn btn-outline-info letra-negra">{{wpPastBiblica.acf.Item_2.titulo_item}}</button>
+            <button *ngIf="wpPastBiblica.acf.Item_3.titulo_item" type="button" (click)="cambiarTexto(3)" id="3" class="btn btn-outline-info letra-negra">{{wpPastBiblica.acf.Item_3.titulo_item}}</button>
+            <button *ngIf="wpPastBiblica.acf.Item_4.titulo_item" type="button" (click)="cambiarTexto(4)" id="4" class="btn btn-outline-info letra-negra">{{wpPastBiblica.acf.Item_4.titulo_item}}</button>
+            <button *ngIf="wpPastBiblica.acf.Item_5.titulo_item" type="button" (click)="cambiarTexto(5)" id="5" class="btn btn-outline-info letra-negra">{{wpPastBiblica.acf.Item_5.titulo_item}}</button>
+            <button *ngIf="wpPastBiblica.acf.Item_6.titulo_item" type="button" (click)="cambiarTexto(6)" id="6" class="btn btn-outline-info letra-negra">{{wpPastBiblica.acf.Item_6.titulo_item}}</button>
         </div>
         <div class="col-md-8 scroll mt-2">
             <span [innerHTML]='parrafo'></span>
         </div>
         <div class="col-md-12 text-center mt-2">
-            <a class="btn btn-info" [href]="download.url" [download]="download.name"><i class="fas fa-file-download"></i> {{ download.name }}</a>
+            <a class="btn btn-info" *ngIf="download.url" [href]="download.url" [download]="download.name"><i class="fas fa-file-download"></i> {{ download.name }}</a>
         </div>
     </div>
 </div>
