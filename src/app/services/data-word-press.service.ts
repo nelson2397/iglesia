@@ -43,4 +43,8 @@ export class DataWordPressService {
   GetFamilia(path:string){
     return this.http.get(`${this.url}/${path}/72`)
   }
+
+  GetPastoralBiblica(path:string){
+    return this.http.get(`${this.url}/${path}/77`)
+  }
 }
