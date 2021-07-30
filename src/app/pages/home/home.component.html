@@ -3,19 +3,19 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" *ngIf="imgHome.acf.carrusel_de_img_1">
                         <img [src]="this.imgHome.acf.carrusel_de_img_1" class="d-block w-100 img-fluid" alt="marta29">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" *ngIf="imgHome.acf.carrusel_de_img_2">
                         <img [src]="this.imgHome.acf.carrusel_de_img_2" class="d-block w-100 img-fluid" alt="dron">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" *ngIf="imgHome.acf.carrusel_de_img_3">
                         <img [src]="this.imgHome.acf.carrusel_de_img_3" class="d-block w-100 img-fluid" alt="parroquia1">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" *ngIf="imgHome.acf.carrusel_de_img_4">
                         <img [src]="this.imgHome.acf.carrusel_de_img_4" class="d-block w-100 img-fluid" alt="dron">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" *ngIf="imgHome.acf.carrusel_de_img_5">
                         <img [src]="this.imgHome.acf.carrusel_de_img_5" class="d-block w-100 img-fluid" alt="parroquia1">
                     </div>
 
