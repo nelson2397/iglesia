@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row mb-3 mt-3">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" *ngIf="imgHome.acf.carrusel_de_img_1">
@@ -28,6 +28,17 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
+            </div>
+        </div>
+        <hr>
+        <div class="col-md-3 m-3">
+            <div class="card text-dark border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-info">IMPORTANTE</div>
+                <div class="card-body">
+                    <h5 class="card-title">Programa de Jovenes Resilientes</h5>
+                    <p class="card-text">Son mas de 500 cupos para Formación, empleo, acompañamiento spicosocial y mas</p>
+                    <a class="btn btn-info " [routerLink]="['avisos']" routerLinkActive="active">saber mas...</a>
+                </div>
             </div>
         </div>
     </div>

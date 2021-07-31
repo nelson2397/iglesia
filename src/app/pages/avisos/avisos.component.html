@@ -1,13 +1,91 @@
 <div class="container">
     <div class="row m-2">
-        <div class="col-md-3">
+        <div class="col-md-12">
+            <h1 class="rochester text-center"> <i class="fas fa-church"></i> {{this.wpAvisos.title.rendered}} </h1>
+        </div>
+        <!-------------------------- Aviso 1 ----------------------------------------->
+        <div class="col-md-4 m-2">
             <div class="card border-info mb-3" style="width: 18rem;">
-                <h5 class="card-header bg-info">IMPORTANTE</h5>
-                <img src="assets/aviso-parroquial.jpg" class="card-img-top" alt="aviso">
-                <div class="card-body bg-info">
-                    <h5 class="card-title ">PROGRAMA JOVENES RESILIENTES</h5>
+                <h5 class="card-header bg-info"> {{this.wpAvisos.acf.aviso_1.titulo_principal}} </h5>
+                <img [src]="this.wpAvisos.acf.aviso_1.imagen" class="card-img-top" alt="aviso">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{this.wpAvisos.acf.aviso_1.titulo}}</h5>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aviso1"> Saber más...</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="aviso1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog mw70">
+                            <div class="modal-content">
+                                <div class="modal-header bg-info">
+                                    <h5 class="modal-title " id="exampleModalLabel">Programa Jóvenes resilientes de USAID Y ACDI/VOCA</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12 justificado">
+                                                <span [innerHTML]='this.wpAvisos.acf.aviso_1.descripcion'></span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <img [src]="this.wpAvisos.acf.aviso_1.imagen" class="card-img-top" alt="aviso">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-------------------------- Aviso 2 ----------------------------------------->
+        <div class="col-md-4 m-2">
+            <div class="card border-info mb-3" style="width: 18rem;">
+                <h5 class="card-header bg-info"> {{this.wpAvisos.acf.aviso_2.titulo_principal}} </h5>
+                <img [src]="this.wpAvisos.acf.aviso_2.imagen" class="card-img-top" alt="aviso">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{this.wpAvisos.acf.aviso_2.titulo}}</h5>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aviso2"> Saber más...</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="aviso2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog mw70">
+                            <div class="modal-content">
+                                <div class="modal-header bg-info">
+                                    <h5 class="modal-title " id="exampleModalLabel">Programa Jóvenes resilientes de USAID Y ACDI/VOCA</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12 justificado">
+                                                <span [innerHTML]='this.wpAvisos.acf.aviso_2.descripcion'></span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <img [src]="this.wpAvisos.acf.aviso_2.imagen" class="card-img-top" alt="aviso">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-------------------------- Aviso 3 ----------------------------------------->
     </div>
 </div>

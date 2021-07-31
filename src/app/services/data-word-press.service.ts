@@ -53,4 +53,8 @@ export class DataWordPressService {
   getProgramaEvangelizacion(path: string){
     return this.http.get(`${this.url}/${path}/144`)
   }
+
+  getAvisosParroquiales(path: string){
+    return this.http.get(`${this.url}/${path}/566`)
+  }
 }
