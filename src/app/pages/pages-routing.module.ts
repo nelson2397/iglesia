@@ -6,7 +6,6 @@ import { BautizoComponent } from './bautizo/bautizo.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { CantoComponent } from './canto/canto.component';
 import { CaridadComponent } from './caridad/caridad.component';
-import { CatecumenadoComponent } from './catecumenado/catecumenado.component';
 import { CencoviComponent } from './cencovi/cencovi.component';
 import { ConfirmacionComponent } from './confirmacion/confirmacion.component';
 import { EducacionComponent } from './educacion/educacion.component';
@@ -36,7 +35,6 @@ const routes: Routes = [
     {path: 'mision', component: MisionComponent},
     {path: 'primera-comunion', component:PrimeraComunionComponent},
     {path: 'confirmacion', component:ConfirmacionComponent},
-    {path: 'catecumenado', component:CatecumenadoComponent},
     {path: 'familia-matrimonio', component:FamiliaMatrimonioComponent},
     {path: 'pastoral-biblica', component:PastoralBiblicaComponent},
     {path: 'pastoral-educativa', component:PastoralEducativaComponent},
